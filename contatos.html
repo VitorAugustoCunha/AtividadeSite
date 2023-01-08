@@ -2,7 +2,7 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-
+    <link rel="stylesheet" href="css/style.css">
     <title>Contatos</title>
 </head>
 <body>
@@ -11,6 +11,45 @@
     <p>E-mail: vitor.2021.eu@gmail.com</p>
     <p>Endereço: Rua Lucia Alves Pascoal</p>
     <a href="index.html">Voltar</a>
+    
+    <table>
+        <tr>
+        <td><label for="nome">Nome: </label></td>
+
+        <td><input type="text" name="nome" id="nome"></td>
+        </tr>
+
+        
+        <tr>
+        <td><label for="email">E-mail</label></td>
+
+        <td><input type="email" name="email" id="email"></td>
+        </tr>
+      
+        <tr>
+        <td><label for="assunto">Assunto:</label></td>
+        <td><select name="assunto" id="assunto">Assunto
+            <option value="cons">Consulta</option>
+            <option value="ment">Mentoria</option>
+            <option value="cont" selected>Contratação</option>
+        
+        </select></td>
+        </tr>
+        <tr>
+        <td><label for="data-reu">Informe a data em que é possivel haver uma Reunião:</label></td>
+        <td><input type="date" name="data-reu" id="data-reu"></td>
+        </tr>
+
+        <tr>
+            <td><label for="mensagem">Mensagem</label></td>
+            <td><textarea name="mensagem" id="mensagem" cols="30" rows="10"></textarea></td>
+        </tr>
+
+        <tr>
+            <td colspan="2"><input type="submit" value="Enviar"></td>
+
+        </tr>
+    </table>
     
 </body>
 </html>
