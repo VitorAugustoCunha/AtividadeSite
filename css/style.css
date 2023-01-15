@@ -1,20 +1,11 @@
-body{
-    background-color: lightpink;
+.masthead {
+    padding-top: calc(6rem + 74px);
+    padding-bottom: 6rem;
 }
-
-p{
-    color: red;
-    font-size: 22px;
-    font-family: Arial, Helvetica, sans-serif;
-
+.text-white {
+  --bs-text-opacity: 1;
+  color: rgba(var(--bs-white-rgb), var(--bs-text-opacity)) !important;
 }
-
-.vermelho{
-    color:red;
-    font-size:24px;
-    
-}
-table, td, th{
-    border-collapse: collapse;
-    border: 1px solid;
+img{
+    border-radius: 50%;
 }

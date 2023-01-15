@@ -1,67 +1,111 @@
-<!DOCTYPE html>
-
-<html lang="pt-br">
+<!doctype html>
+<html lang="en">
   <head>
-    <meta charset="UTF-8" />
     <link rel="stylesheet" href="css/style.css">
-
-    <title>Vitor - Página Pessoal</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
   </head>
-
   <body>
-    <table style="border: 0px;">
-        <td><img src = "img/teste.jpg" alt="" width="200px"></td>
-        <td><h1>Vitor Augusto</h1>
-
-        <p><strong>Estudante de programação</strong></p>
-
-        <p>
-          <em>
-            Focando no meu progresso acadêmico, e além tentando entrar
-            no mercado de trabalho</em>
-        </p>
-        <p>Veja meu <a href="https://www.linkedin.com/in/vitor-augusto-b617b6233/">linkedin</a> </p>
-        </td>
-    </table>
-      <hr>
-
-    <h3>Cursos e especializações</h3>
-    <ul type="square">
-        <li>Programação em java</li>
-        <li>Programação em python</li>
-        <li>Programação em Lua</li>
-        <li>Banco de dados voltado para MySQL</li>
-    </ul>
-        <h3>Experiencias profissionais</h3>
-
-    <table>
-
-      <thead>
-
-        <tr>
-          <th>Data</th>
-          <th>Experiencia</th>
-        </tr>
-
-      </thead>
-
-      <tbody>
-
-        <tr>
-          <td>2019-2021</td>
-          <td>Estudante de Redes de computadores</td>
-        </tr>
-
-        <tr>
-          <td>2022</td>
-          <td>Participação em Startups</td>
-        </tr>
-      </tbody>
-    
-    </table>
-
-    <a href="hobbies.html">Hobbies<br></a>
-    <a href ="contatos.html">Contatos</a>
-
+    <nav class="navbar navbar-expand-lg bg-light text-uppercase fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand text-ligt" href="#page-top">Vitor</a>
+            <button class="navbar-toggler text-uppercase font-weight-bold text-dark rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item mx-0 mx-lg-1 text-ligt"><a class="nav-link py-3 px-0 px-lg-3 rounded active" href="#">Inicio</a></li>
+                    <li class="nav-item mx-0 mx-lg-1 text-ligt"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#sobre">Sobre mim</a></li>
+                    <li class="nav-item mx-0 mx-lg-1 text-ligt"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#contato">contato</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header class="masthead bg-primary text-white text-center" id="inicio">
+        <div class="container d-flex align-items-center flex-column p-5">
+            <img class="masthead-avatar mb-5 " src="img/teste.jpg" alt="..." />
+            <h1 class="masthead-heading text-uppercase mb-3">Vitor Augusto da Cunha</h1>
+            <div class="divider-custom divider-light">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon mb-3"><i class="fas fa-star"></i></div>
+            </div>
+            <p class="masthead-subheading font-weight-light mb-0">Focando no meu progresso acadêmico, e além tentando entrar no mercado de trabalho</p>
+        </div>
+    </header>
+    <section class="page-section bg-light text-dark mt-5 mb-5">
+        <div id="sobre" class="p-5"></div>
+        <div class="container">
+            <h2 class="page-section-heading text-center text-uppercase text-dark mb-5">Sobre mim</h2>
+            <div class="divider-custom divider-dark">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon text-center"><i class="fas fa-star"></i></div>
+                <div class="divider-custom-line mb-3"></div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 ms-auto"><p class="lead">Programador jr. Java, mas aprendendo novas ferramentas e outras lingas como python, SQL, javascript e toda parte do front com HTML e Css, dedico ao conhecimento de novas técnologias</p></div>
+                <div class="col-lg-4 me-auto"><p class="lead">Entrando no mercado de trabalho com algumas experiências anteriores de projetos, mas nunca trabalhei, estou disposta a exercer o cargo e pronto para novos desafios.</p></div>
+            </div>
+        </div>
+    </section>
+    <section class="page-section" id="contato">
+        <div class="container">
+            <h2 class="page-section-heading mb-5 text-center text-uppercase text-dark mb-0">Contato</h2>
+            <div class="divider-custom">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon text-center"><i class="fas fa-star tex"></i></div>
+                <div class="divider-custom-line mb-5"></div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-xl-7">
+                    <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+                        <div class="form-floating mb-3">
+                            <input class="form-control" id="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
+                            <label for="name">Nome completo</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input class="form-control" id="email" type="email" placeholder="name@example.com" data-sb-validations="required,email" />
+                            <label for="email">Email</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input class="form-control" id="phone" type="tel" placeholder="(123) 456-7890" data-sb-validations="required" />
+                            <label for="phone">Número</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <textarea class="form-control" id="message" type="text" placeholder="Enter your message here..." style="height: 10rem" data-sb-validations="required"></textarea>
+                            <label for="message">Mensagem</label>
+                        </div>
+                        <div class="d-none" id="submitSuccessMessage">
+                            <div class="text-center mb-3">
+                                <div class="fw-bolder">completo</div>
+                                <br />
+                                <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary btn-xl" id="submitButton" type="submit">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer text-center bg-primary mt-5 p-5">
+        <div class="container">
+            <div class="row">
+                <div class="mb-5 mb-lg-0">
+                    <h4 class="text-uppercase mb-4 text-white">Minhas redes</h4>
+                    <a class="btn btn-outline-light btn-social mx-1" href="https://www.linkedin.com/in/vitor-augusto-b617b6233/"><i class="fab fa-fw fa-linkedin-in"></i></a>
+                    <a class="btn btn-outline-light btn-social mx-1" href="inicio"><i class="fab fa-fw fa-dribbble"></i></a>
+                    <a class="btn btn-outline-light btn-social mx-1" href="https://github.com/VitorAugustoCunha/AtividadeSite"><i class="fab fa-fw fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="copyright py-4 text-center text-white bg-primary">
+        <div class="container"><small>Copyright &copy; Vitor Augusto</small></div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
   </body>
 </html>
